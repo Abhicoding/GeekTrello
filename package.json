@@ -1,0 +1,27 @@
+{
+  "name": "geek-trello",
+  "version": "1.0.0",
+  "description": "Trello clone using React and Express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abhicoding/geek-trello.git"
+  },
+  "keywords": [
+    "Trello",
+    "React",
+    "Express"
+  ],
+  "author": "Abhishek Shingane",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Abhicoding/geek-trello/issues"
+  },
+  "homepage": "https://github.com/Abhicoding/geek-trello#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

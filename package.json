@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon src/server/server.js",
-    "dev": "concurrently --kill-others \"nodemon src/server/server.js\" \"npm run webpack\"",
+    "dev": "concurrently --kill-others \"nodemon src/server/server.js\" \"npm run webpack --mode=development\"",
     "webpack": "./node_modules/.bin/webpack -w",
     "test": "mocha --compilers babel-core/register ./test/*test.js"
   },

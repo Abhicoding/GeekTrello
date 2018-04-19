@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import style from './../scss/boardcreate.scss'
+import './../scss/boardcreate.scss'
 
 export default class Boardcreate extends Component {
   render () {

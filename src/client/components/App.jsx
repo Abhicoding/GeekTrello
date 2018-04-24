@@ -4,6 +4,7 @@ import {createBrowserHistory} from 'history'
 
 import Logo from './Logo.jsx'
 import Home from './Home.jsx'
+import Dashboard from './Dashboard.jsx'
 
 export default class App extends Component {
   render () {
@@ -12,6 +13,7 @@ export default class App extends Component {
         <Route path='/' component={Logo} />
         <Route exact path='/' component={Home} />
         <Route path='/home' component={Home} />
+        <Route path='/board' component={Dashboard} />
       </div>
     </Router>
   }

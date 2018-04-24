@@ -1,18 +1,16 @@
 import React, { Component } from 'react'
 
+import Listcreate from './Listcreate.jsx'
+
+import './../scss/dashboard.scss'
+
 export default class Dashboard extends Component {
   constructor () {
     super()
     this.state = {
-      list: ['first', 'second', 'third', 'fourth']
+      list: ['list 1']
     }
   }
-
-  //   newBoard (name) {
-  //     this.setState({
-  //       list: this.state.list.concat([name])
-  //     })
-  //   }
 
   render () {
     // console.log(this.state.list)
@@ -20,6 +18,7 @@ export default class Dashboard extends Component {
     //   return <li key={i}><Board board={d} /></li>
     // })
     return <div>
+      <Listcreate />
     </div>
   }
 }

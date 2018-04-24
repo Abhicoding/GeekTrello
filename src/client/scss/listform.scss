@@ -1,0 +1,39 @@
+.form-container {
+    background-color: grey;
+    width: 100%;
+    border-radius: 3px;
+    margin:1%;
+    box-sizing: border-box;
+    padding: 2%;
+}
+
+.name {
+    float: left;
+}
+
+.controls {
+    float: left;
+    width: 100%;
+    display: table-row;
+}
+
+.controls > * {
+   margin-top: 1%;
+}
+
+.name {
+    width: 100%;
+}
+
+.submit {
+    float: left;
+}
+
+.close {
+    float: right;
+    padding: 2%;
+}
+
+br {
+    clear: both;
+ }

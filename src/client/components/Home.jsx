@@ -7,25 +7,25 @@ export default class Home extends Component {
   constructor () {
     super()
     this.state = {
-      list: ['first', 'second', 'third', 'fourth']
+      boards: ['first', 'second', 'third', 'fourth']
     }
   }
 
   newBoard (name) {
     this.setState({
-      list: this.state.list.concat([name])
+      boards: this.state.boards.concat([name])
     })
   }
 
   render () {
     console.log(this.state.list)
-    const listItem = this.state.list.map((d, i) => {
+    const listItem = this.state.boards.map((d, i) => {
       return <li key={i}><Board board={d} /></li>
     })
     return <div>
       <ul>
-        <Boardcreate create={this.newBoard.bind(this)} />
         {listItem}
+        <Boardcreate create={this.newBoard.bind(this)} />
       </ul>
     </div>
   }

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import Listcreate from './Listcreate.jsx'
 import List from './List.jsx'
+// import Card from './Card.jsx'
 
 import './../scss/dashboard.scss'
 

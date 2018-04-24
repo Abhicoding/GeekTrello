@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 import './../scss/list.scss'
 
+import Card from './Card.jsx'
+
 export default class List extends Component {
   constructor (props) {
     super()
@@ -11,6 +13,8 @@ export default class List extends Component {
   }
 
   render () {
-    return <div className='list-container'>{this.state.title}</div>
+    return <div className='list-container'>{this.state.title}
+      <Card />
+    </div>
   }
 }

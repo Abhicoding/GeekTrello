@@ -12,13 +12,15 @@ export default class Dashboard extends Component {
     }
   }
 
+  newList (name) {
+    this.setState({
+      list: this.state.list.concat([name])
+    })
+  }
+
   render () {
-    // console.log(this.state.list)
-    // const listItem = this.state.list.map((d, i) => {
-    //   return <li key={i}><Board board={d} /></li>
-    // })
     return <div>
-      <Listcreate />
+      <Listcreate newlist={this.newList.bind(this)} />
     </div>
   }
 }

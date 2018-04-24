@@ -133,7 +133,7 @@ eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/c
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \".list-container {\\n  background-color: #C8C8C8;\\n  width: 160px;\\n  border-radius: 3px;\\n  padding: 0.5%;\\n  color: #000;\\n  font-weight: bold;\\n  box-sizing: border-box;\\n  float: left;\\n  margin-left: calc(5%/6);\\n  margin-top: 1%; }\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./src/client/scss/list.scss?./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \".list-container {\\n  background-color: #C8C8C8;\\n  width: 250px;\\n  border-radius: 3px;\\n  padding: 10px;\\n  color: #000;\\n  font-weight: bold;\\n  box-sizing: border-box;\\n  float: left;\\n  margin-left: 20px;\\n  margin-top: 100px; }\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./src/client/scss/list.scss?./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js");
 
 /***/ }),
 
@@ -144,7 +144,7 @@ eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/c
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \".container {\\n  background-color: grey;\\n  width: 160px;\\n  border-radius: 3px;\\n  padding: 0.5%;\\n  display: table;\\n  box-sizing: border-box;\\n  float: left;\\n  margin-left: calc(5%/6);\\n  margin-top: 1%; }\\n\\n.buttondiv {\\n  display: table-row; }\\n\\n.formdiv {\\n  display: table-row; }\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./src/client/scss/listcreate.scss?./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \".container {\\n  background-color: grey;\\n  width: 250px;\\n  border-radius: 3px;\\n  padding: 10px;\\n  display: table;\\n  box-sizing: border-box;\\n  float: left;\\n  margin-left: 20px;\\n  margin-top: 100px; }\\n\\n.buttondiv {\\n  display: table-row; }\\n\\n.formdiv {\\n  display: table-row; }\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./src/client/scss/listcreate.scss?./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js");
 
 /***/ }),
 
@@ -166,7 +166,7 @@ eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/c
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \".logo {\\n  position: absolute;\\n  text-align: center;\\n  width: 100%; }\\n\\n.logo h1 {\\n  vertical-align: middle; }\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./src/client/scss/logo.scss?./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \".logo {\\n  position: fixed;\\n  text-align: center;\\n  width: 100%; }\\n\\n.logo h1 {\\n  vertical-align: middle; }\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./src/client/scss/logo.scss?./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js");
 
 /***/ }),
 

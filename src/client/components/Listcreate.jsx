@@ -6,7 +6,6 @@ import Listform from './Listform.jsx'
 export default class Listcreate extends Component {
   constructor (props) {
     super()
-    console.log(props.newlist)
     this.state = {
       liststatus: true
     }

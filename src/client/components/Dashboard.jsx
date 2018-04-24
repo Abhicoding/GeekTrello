@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import Listcreate from './Listcreate.jsx'
+import List from './List.jsx'
 
 import './../scss/dashboard.scss'
 
@@ -8,19 +9,25 @@ export default class Dashboard extends Component {
   constructor () {
     super()
     this.state = {
-      list: ['list 1']
+      lists: ['list 1']
     }
   }
 
   newList (name) {
     this.setState({
-      list: this.state.list.concat([name])
+      lists: this.state.lists.concat([name])
     })
   }
 
   render () {
+    const listItem = this.state.lists.map((d, i) => {
+      return <li key={i}><List title={d} /></li>
+    })
     return <div>
-      <Listcreate newlist={this.newList.bind(this)} />
+      <ul>
+        {listItem}
+        <Listcreate newlist={this.newList.bind(this)} />
+      </ul>
     </div>
   }
 }

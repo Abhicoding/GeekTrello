@@ -18,13 +18,12 @@ export default class Home extends Component {
   }
 
   render () {
-    console.log(this.state.list)
-    const listItem = this.state.boards.map((d, i) => {
+    const boardItem = this.state.boards.map((d, i) => {
       return <li key={i}><Board board={d} /></li>
     })
     return <div>
       <ul>
-        {listItem}
+        {boardItem}
         <Boardcreate create={this.newBoard.bind(this)} />
       </ul>
     </div>

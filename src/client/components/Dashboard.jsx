@@ -9,7 +9,7 @@ export default class Dashboard extends Component {
   constructor () {
     super()
     this.state = {
-      lists: ['list 1']
+      lists: ['list 1', '2', '3', '4', '5', '6', '7']
     }
   }
 
@@ -23,7 +23,7 @@ export default class Dashboard extends Component {
     const listItem = this.state.lists.map((d, i) => {
       return <li key={i}><List title={d} /></li>
     })
-    return <div>
+    return <div className='dashboard'>
       <ul>
         {listItem}
         <Listcreate newlist={this.newList.bind(this)} />

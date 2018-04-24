@@ -1,6 +1,8 @@
-// .dashboard {
-//     float: left;
-// }
+.dashboard {
+    overflow: auto;
+    min-width: 10000px;
+    position: absolute;
+}
 
 // .dashboard::after {
 //     clear: both;

@@ -23,7 +23,6 @@ export default class Home extends Component {
       return <li key={i}><Board board={d} /></li>
     })
     return <div>
-      <h1>GeekTrello</h1>
       <ul>
         <Boardcreate create={this.newBoard.bind(this)} />
         {listItem}

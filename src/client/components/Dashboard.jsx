@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import Listcreate from './Listcreate.jsx'
 import List from './List.jsx'
-// import Card from './Card.jsx'
+import Cardmodal from './Cardmodal.jsx'
 
 import './../scss/dashboard.scss'
 
@@ -25,10 +25,11 @@ export default class Dashboard extends Component {
       return <li key={i}><List title={d} /></li>
     })
     return <div className='dashboard'>
-      <ul>
+      <Cardmodal />
+      {/* <ul>
         {listItem}
         <Listcreate newlist={this.newList.bind(this)} />
-      </ul>
+      </ul> */}
     </div>
   }
 }

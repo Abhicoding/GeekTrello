@@ -11,9 +11,9 @@ export default class Card extends Component {
 //   }
 
   render () {
-    return <div class='card bg-light text-dark'>
-      <div class='card-body'>
-        <div class='card-title'><h4>Light Card</h4></div>
+    return <div className='card bg-light text-dark'>
+      <div className='card-body'>
+        <div className='card-title'><h4>Light Card</h4></div>
       Card Body Here</div>
     </div>
   }

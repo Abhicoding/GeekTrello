@@ -11,7 +11,7 @@ export default class Board extends Component {
   }
   render () {
     return <div className='boards'>
-      <button className='card'>
+      <button className='boardbutton'>
         {this.state.board}
       </button>
     </div>

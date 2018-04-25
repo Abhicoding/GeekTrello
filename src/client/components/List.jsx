@@ -13,8 +13,11 @@ export default class List extends Component {
   }
 
   render () {
-    return <div className='list-container'>{this.state.title}
+    return <div className='listcontainer'>{this.state.title}
       <Card />
+      <div className='createcard'>
+        <button type='button' className='btn btn-light'> Add a new Card </button>
+      </div>
     </div>
   }
 }

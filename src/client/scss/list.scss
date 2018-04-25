@@ -1,4 +1,4 @@
-.list-container {
+div .listcontainer {
     background-color: #C8C8C8;
     width: 250px;
     border-radius: 3px;
@@ -10,4 +10,16 @@
     float: left;
     margin-left: 20px;
     margin-top: 10px;
+}
+
+.createcard button {
+    width: 100%;
+    background-color: unset;
+    border: none; 
+}
+
+.btn-light:hover {
+    text-decoration: underline;
+    background-color: unset;
+    border: none; 
 }

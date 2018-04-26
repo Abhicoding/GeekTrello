@@ -12,11 +12,15 @@ export default class List extends Component {
     }
   }
 
+  onCardCreate () {
+    this.props.cardmodalopen()
+  }
+
   render () {
     return <div className='listcontainer'>{this.state.title}
       <Card />
       <div className='createcard'>
-        <button type='button' className='btn btn-light'> Add a new Card </button>
+        <button type='button' className='btn btn-light' onClick={this.onCardCreate.bind(this)}> Add a new Card </button>
       </div>
     </div>
   }

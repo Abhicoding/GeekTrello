@@ -30,12 +30,11 @@ const config = {
           loader: 'babel-loader',
           options: {
             cacheDirectory: true,
-            presets: ['react', 'es2015'] // Transpiles JSX and ES6
+            presets: ['react', 'es2015', 'stage-2'] // Transpiles JSX and ES6
           }
         }]
       }
     ]
-
   }
 }
 

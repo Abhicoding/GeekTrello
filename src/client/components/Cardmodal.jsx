@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 
+import './../scss/cardmodal.scss'
+
 export default class Cardmodal extends Component {
   constructor (props) {
     super()
@@ -23,28 +25,35 @@ export default class Cardmodal extends Component {
     document.removeEventListener('keyup', this.onKeyUp)
   }
 
+  onSubmit (e) {
+    console.log('clicked', e.target.cardtitle)
+    e.preventDefault()
+    this.props.cardmodalclose()
+  }
+
 
   render () {
     return (
-      <div>
+      <form onSubmit={this.onSubmit}>
         <div className='modal fade show' id='myModal'style={{display: 'block'}}>
           <div className='modal-dialog'>
             <div className='modal-content'>
               <div className='modal-header'>
-                <h4 className='modal-title'>Modal Heading</h4>
-                <button type='button' className='close' data-dismiss='modal' onClick={this.onClose.bind(this)}>&times;</button>
+                <input className='titleinput' name='cardtitle' type='text' placeholder='Card Heading'/>
+                <button className='close' onClick={this.onClose.bind(this)}>&times;</button>
               </div>
               <div className='modal-body'>
-          Modal body..
+                <textarea name='description' className='descriptioninput' placeholder='Add description' />
               </div>
               <div className='modal-footer'>
-                <button type='button' className='btn btn-danger' data-dismiss='modal' onClick={this.onClose.bind(this)}>Close</button>
+                <button type='submit' className='btn btn-light'>Save</button>
+                <button className='btn btn-danger' onClick={this.onClose.bind(this)}>Close</button>
               </div>
             </div>
           </div>
         </div>
         <div className='modal-backdrop fade show' />
-      </div>
+      </form>
     )
   }
 }

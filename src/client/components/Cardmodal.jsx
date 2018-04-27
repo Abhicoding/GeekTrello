@@ -27,14 +27,21 @@ export default class Cardmodal extends Component {
 
   onSubmission = (e) => {
     e.preventDefault()
-    console.log('clicked', e.target[0].value, e.target[1].value)
+    console.log('clicked', e.target.cardtitle.value, e.target.description.value, e.target.id)
+    this.props.newcard(
+      {
+        listid: e.target.id,
+        title: e.target.cardtitle.value,
+        desc: e.target.description.value
+      }
+    )
     this.props.cardmodalclose()
   }
 
 
   render () {
     return (
-      <form onSubmit={this.onSubmission.bind(this)}>
+      <form onSubmit={this.onSubmission.bind(this)} id={this.props.id}>
         <div className='modal fade show' id='myModal'style={{display: 'block'}}>
           <div className='modal-dialog'>
             <div className='modal-content'>

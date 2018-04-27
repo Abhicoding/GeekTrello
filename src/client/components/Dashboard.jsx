@@ -10,31 +10,68 @@ export default class Dashboard extends Component {
   constructor () {
     super()
     this.state = {
-      lists: ['list 1'],
-      cardmodal: ''
+      lists: [
+        {
+          'listid': 0,
+          'listname': 'List X',
+          'cards':
+            [
+              // {
+              //   'cardid': 0,
+              //   'cardtitle': 'something',
+              //   'carddesc': 'some description'
+              // }
+            ]
+        }
+      ],
+      cardmodal: {
+        status: '',
+        id: ''
+      }
     }
   }
 
   newList (name) {
     this.setState({
-      lists: this.state.lists.concat([name])
+      lists: this.state.lists.concat(
+        {
+          listid: this.state.lists.length - 1,
+          listname: name,
+          cards: []
+        }
+      )
     })
   }
 
   newCardModalClose () {
-    return this.setState({cardmodal: ''})
+    return this.setState(
+      {
+        cardmodal: {
+          status: '',
+          id: ''
+        }
+      }
+    )
   }
 
-  newCardModalOpen () {
-    return this.setState({cardmodal: 'modal fade show'})
+  newCardModalOpen (idinput) {
+    return this.setState(
+      {
+        cardmodal: {
+          status: 'modal fade show',
+          id: idinput
+        }
+      }
+    )
   }
 
   render () {
     const listItem = this.state.lists.map((d, i) => {
-      return <li key={i}><List title={d} cardmodalopen={this.newCardModalOpen.bind(this)} /></li>
+      return <li key={i}><List item={d} cardmodalopen={this.newCardModalOpen.bind(this)} /></li>
     })
+
     return <div className='dashboard'>
-      {this.state.cardmodal ? <Cardmodal cardmodalclose={this.newCardModalClose.bind(this)} /> : null}
+      {this.state.cardmodal.status ? <Cardmodal cardmodalclose={this.newCardModalClose.bind(this)} id={this.state.cardmodal.id} /> : null}
       <ul>
         {listItem}
         <Listcreate newlist={this.newList.bind(this)} />

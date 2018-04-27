@@ -8,19 +8,27 @@ export default class List extends Component {
   constructor (props) {
     super()
     this.state = {
-      title: props.title
+      item: props.item
     }
   }
 
-  onCardCreate () {
-    this.props.cardmodalopen()
+  onCardCreate = (e) => {
+    this.props.cardmodalopen(e.target.id)
   }
 
   render () {
-    return <div className='listcontainer'>{this.state.title}
-      <Card />
+    const cardItem = this.state.item.cards.map((d, i) => {
+      return <li key={i}><Card item={d} /></li>
+    })
+    return <div className='listcontainer'>
+      <div className='listheader'>
+        {this.state.item.listname}
+      </div>
+      <ul>
+        {cardItem}
+      </ul>
       <div className='createcard'>
-        <button type='button' className='btn btn-light' onClick={this.onCardCreate.bind(this)}> Add a new Card </button>
+        <button type='button' id={this.state.item.listid} className='btn btn-light' onClick={this.onCardCreate}> Add a new Card </button>
       </div>
     </div>
   }

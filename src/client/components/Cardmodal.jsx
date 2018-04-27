@@ -25,29 +25,29 @@ export default class Cardmodal extends Component {
     document.removeEventListener('keyup', this.onKeyUp)
   }
 
-  onSubmit (e) {
-    console.log('clicked', e.target.cardtitle)
+  onSubmission = (e) => {
     e.preventDefault()
+    console.log('clicked', e.target[0].value, e.target[1].value)
     this.props.cardmodalclose()
   }
 
 
   render () {
     return (
-      <form onSubmit={this.onSubmit}>
+      <form onSubmit={this.onSubmission.bind(this)}>
         <div className='modal fade show' id='myModal'style={{display: 'block'}}>
           <div className='modal-dialog'>
             <div className='modal-content'>
               <div className='modal-header'>
-                <input className='titleinput' name='cardtitle' type='text' placeholder='Card Heading'/>
-                <button className='close' onClick={this.onClose.bind(this)}>&times;</button>
+                <input className='titleinput' name='cardtitle' type='text' placeholder='Card Heading' required/>
+                <button className='close' type='button' onClick={this.onClose.bind(this)}>&times;</button>
               </div>
               <div className='modal-body'>
-                <textarea name='description' className='descriptioninput' placeholder='Add description' />
+                <textarea className='descriptioninput' name='description' placeholder='Add description' />
               </div>
               <div className='modal-footer'>
-                <button type='submit' className='btn btn-light'>Save</button>
-                <button className='btn btn-danger' onClick={this.onClose.bind(this)}>Close</button>
+                <button className='btn btn-light' type='submit'>Save</button>
+                <button className='btn btn-danger' type='button'>Close</button>
               </div>
             </div>
           </div>

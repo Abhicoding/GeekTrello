@@ -9,6 +9,7 @@ export default class Listcreate extends Component {
     this.state = {
       liststatus: true
     }
+    this.onClickToggle = this.onClickToggle.bind(this)
   }
 
   onClickToggle () {
@@ -21,9 +22,9 @@ export default class Listcreate extends Component {
     return <div className='listcreate'>
       <div className='buttondiv' >
         {this.state.liststatus
-          ? <input className='addlist' type='submit' value='Add list' onClick={this.onClickToggle.bind(this)} /> : null}
+          ? <input className='addlist' type='submit' value='Add list' onClick={this.onClickToggle} /> : null}
       </div>
-      <div className='formdiv'>{!this.state.liststatus ? <Listform toggle={this.onClickToggle.bind(this)} newlist={this.props.newlist.bind(this)} /> : null}
+      <div className='formdiv'>{!this.state.liststatus ? <Listform toggle={this.onClickToggle} newlist={this.props.newlist.bind(this)} /> : null}
       </div>
     </div>
   }

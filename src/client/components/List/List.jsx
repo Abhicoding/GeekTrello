@@ -10,9 +10,10 @@ export default class List extends Component {
     this.state = {
       item: props.item
     }
+    this.onCardCreate = this.onCardCreate.bind(this)
   }
 
-  onCardCreate = (e) => {
+  onCardCreate (e) {
     this.props.cardmodalopen(e.target.id)
   }
 

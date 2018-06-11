@@ -12,6 +12,7 @@ export default class Home extends Component {
     this.state = {
       boards: ['first', 'second', 'third', 'fourth']
     }
+    this.newBoard = this.newBoard.bind(this)
   }
 
   newBoard (name) {
@@ -27,7 +28,7 @@ export default class Home extends Component {
     return <div className='divboard'>
       <ul>
         {boardItem}
-        <Boardcreate create={this.newBoard.bind(this)} />
+        <Boardcreate create={this.newBoard} />
       </ul>
     </div>
   }

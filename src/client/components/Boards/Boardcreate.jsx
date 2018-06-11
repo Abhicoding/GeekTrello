@@ -5,6 +5,7 @@ import './boardcreate.scss'
 export default class Boardcreate extends Component {
   constructor (props) {
     super()
+    this.passBoardName = this.passBoardName.bind(this)
   }
 
   passBoardName () {
@@ -16,7 +17,7 @@ export default class Boardcreate extends Component {
 
   render () {
     return <div className='boardcreate'>
-      <button className='cardcreate' onClick={this.passBoardName.bind(this)}>
+      <button className='cardcreate' onClick={this.passBoardName}>
         Create Board
       </button>
     </div>

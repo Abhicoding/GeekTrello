@@ -28,6 +28,10 @@ export default class Dashboard extends Component {
         id: ''
       }
     }
+    this.newList = this.newList.bind(this)
+    this.newCardModalClose = this.newCardModalClose.bind(this)
+    this.newCardModalOpen = this.newCardModalOpen.bind(this)
+    this.newCardCreate = this.newCardCreate.bind(this)
   }
 
   newList (name) {
@@ -79,16 +83,16 @@ export default class Dashboard extends Component {
   render () {
     const listItem = this.state.lists.map((d, i) => {
       return <li key={i}><List item={d}
-        cardmodalopen={this.newCardModalOpen.bind(this)} /></li>
+        cardmodalopen={this.newCardModalOpen} /></li>
     })
     return <div className='dashboard'>
       {this.state.cardmodal.status
-        ? <Cardmodal cardmodalclose={this.newCardModalClose.bind(this)}
-          id={this.state.cardmodal.id} newcard={this.newCardCreate.bind(this)} />
+        ? <Cardmodal cardmodalclose={this.newCardModalClose}
+          id={this.state.cardmodal.id} newcard={this.newCardCreate} />
         : null}
       <ul>
         {listItem}
-        <Listcreate newlist={this.newList.bind(this)} />
+        <Listcreate newlist={this.newList} />
       </ul>
     </div>
   }

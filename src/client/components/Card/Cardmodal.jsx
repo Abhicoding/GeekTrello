@@ -5,29 +5,31 @@ import './cardmodal.scss'
 export default class Cardmodal extends Component {
   constructor (props) {
     super()
+    this.onClose = this.onClose.bind(this)
+    this.onKeyUp = this.onKeyUp.bind(this)
+    this.onSubmission = this.onSubmission.bind(this)
   }
 
   onClose () {
     this.props.cardmodalclose()
   }
 
-  onKeyUp = (e) => {
+  onKeyUp (e) {
     if (e.which === 27) {
       this.props.cardmodalclose()
     }
   }
 
-  componentDidMount() {
+  componentDidMount () {
     document.addEventListener('keyup', this.onKeyUp)
   }
 
-  componentWillUnmount(){
+  componentWillUnmount () {
     document.removeEventListener('keyup', this.onKeyUp)
   }
 
-  onSubmission = (e) => {
+  onSubmission (e) {
     e.preventDefault()
-    console.log('clicked', e.target.cardtitle.value, e.target.description.value, e.target.id)
     this.props.newcard(
       {
         listid: e.target.id,
@@ -38,16 +40,15 @@ export default class Cardmodal extends Component {
     this.props.cardmodalclose()
   }
 
-
   render () {
     return (
-      <form onSubmit={this.onSubmission.bind(this)} id={this.props.id}>
+      <form onSubmit={this.onSubmission} id={this.props.id}>
         <div className='modal fade show' id='myModal'style={{display: 'block'}}>
           <div className='modal-dialog'>
             <div className='modal-content'>
               <div className='modal-header'>
-                <input className='titleinput' name='cardtitle' type='text' placeholder='Card Heading' required/>
-                <button className='close' type='button' onClick={this.onClose.bind(this)}>&times;</button>
+                <input className='titleinput' name='cardtitle' type='text' placeholder='Card Heading' required />
+                <button className='close' type='button' onClick={this.onClose}>&times;</button>
               </div>
               <div className='modal-body'>
                 <textarea className='descriptioninput' name='description' placeholder='Add description' />

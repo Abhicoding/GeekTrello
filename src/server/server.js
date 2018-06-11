@@ -6,7 +6,7 @@ const app = express()
 app.use(express.static(path.join(__dirname, './../../')))
 
 app.all('*', function (req, res) {
-  res.sendFile(path.join(__dirname, '../../build/index.html'))
+  res.sendFile(path.join(__dirname, '../../index.html'))
 })
 
 app.get('/', function (req, res) {

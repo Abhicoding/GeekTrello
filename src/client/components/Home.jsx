@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 
 import Boardcreate from './Boardcreate.jsx'
 import Board from './Board.jsx'
@@ -21,9 +22,9 @@ export default class Home extends Component {
 
   render () {
     const boardItem = this.state.boards.map((d, i) => {
-      return <li key={i}><Board board={d} /></li>
+      return <li key={i}><Link to='/board'><Board board={d} /></Link></li>
     })
-    return <div class='divboard'>
+    return <div className='divboard'>
       <ul>
         {boardItem}
         <Boardcreate create={this.newBoard.bind(this)} />

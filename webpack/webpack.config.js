@@ -1,10 +1,9 @@
-var path = require('path')
+const path = require('path')
 
-var BUILD_DIR = path.resolve(__dirname, './build')
-var APP_DIR = path.resolve(__dirname, './src/client')
+const APP_DIR = path.resolve(__dirname, '../src/client')
+const BUILD_DIR = path.resolve(__dirname, '../build/')
 
 const config = {
-  mode: 'development',
   entry: {
     main: APP_DIR + '/index.js'
   },
@@ -16,6 +15,7 @@ const config = {
     rules: [
       {
         test: /(\.css|.scss)$/,
+        exclude: /node_modules/,
         use: [{
           loader: 'style-loader' // creates style nodes from JS strings
         }, {

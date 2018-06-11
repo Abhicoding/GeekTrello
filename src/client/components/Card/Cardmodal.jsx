@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-import './../scss/cardmodal.scss'
+import './cardmodal.scss'
 
 export default class Cardmodal extends Component {
   constructor (props) {

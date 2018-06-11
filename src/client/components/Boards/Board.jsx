@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import './../scss/board.scss'
+import './board.scss'
 
 export default class Board extends Component {
   constructor (props) { // Here props need to be array object of boards

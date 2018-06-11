@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-import Listcreate from './Listcreate.jsx'
-import List from './List.jsx'
-import Cardmodal from './Cardmodal.jsx'
+import Listcreate from './../List/Listcreate.jsx'
+import List from './../List/List.jsx'
+import Cardmodal from './../Card/Cardmodal.jsx'
 
-import './../scss/dashboard.scss'
+import './dashboard.scss'
 
 export default class Dashboard extends Component {
   constructor () {

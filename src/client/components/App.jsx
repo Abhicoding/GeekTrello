@@ -1,23 +1,23 @@
 import React, { Component } from 'react'
-import {Router, Route} from 'react-router-dom'
-import {createBrowserHistory} from 'history'
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
 import Header from './Header/Header.jsx'
 
-// import Home from './Home.jsx'
-// import Dashboard from './Dashboard.jsx'
+import Home from './Home/Home.jsx'
+import Dashboard from './Dashboard/Dashboard.jsx'
 
 export default class App extends Component {
   render () {
     return (
-      <Router history={createBrowserHistory()}>
+      <BrowserRouter>
         <div>
-          <Route path='/' component={Header} />
-          {/* <Route exact path='/' component={Home} />
-          <Route path='/home' component={Home} />
-          <Route path='/board' component={Dashboard} /> */}
+          <Header />
+          <Switch className='app'>
+            <Route exact path='/home' component={Home} />
+            <Route path='/board' component={Dashboard} />
+          </Switch>
         </div>
-      </Router>
+      </BrowserRouter>
     )
   }
 }

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
-import './../scss/list.scss'
+import './list.scss'
 
-import Card from './Card.jsx'
+import Card from './../Card/Card.jsx'
 
 export default class List extends Component {
   constructor (props) {

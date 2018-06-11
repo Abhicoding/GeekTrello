@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 
-import Boardcreate from './Boardcreate.jsx'
-import Board from './Board.jsx'
+import Boardcreate from './../Boards/Boardcreate.jsx'
+import Board from './../Boards/Board.jsx'
 
-import './../scss/home.scss'
+import './home.scss'
 
 export default class Home extends Component {
   constructor () {

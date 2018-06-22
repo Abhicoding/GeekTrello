@@ -7,9 +7,7 @@ const APP_DIR = path.resolve(__dirname, '../src')
 const BUILD_DIR = path.resolve(__dirname, '../build')
 
 const clientConfig = {
-  entry: {
-    main: APP_DIR + '/client/index.js'
-  },
+  entry: APP_DIR + '/client/index.js',
   output: {
     filename: 'bundle.js',
     path: BUILD_DIR
@@ -20,21 +18,21 @@ const clientConfig = {
         test: [/\.svg$/, /\.jpe?g$/, /\.png$/],
         loader: 'file-loader',
         options: {
-          name: 'build/media/[name].[ext]',
+          name: '../build/media/[name].[ext]',
           publicPath: url => url.replace(/public/, '')
         }
       },
       {
-        test: /(\.s?css)$/,
-        use: ExtractTextPlugin({
+        test: /\.s?css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
           use: [
             {
-              loader: 'style-loader' // creates style nodes from JS strings
-            }, {
               loader: 'css-loader', // translates CSS into CommonJS
               options: {importLoaders: 1}
-            }, {
-              loader: 'sass-loader' // compiles Sass to CSS
+            },
+            {
+              loader: 'sass-loader'
             },
             {
               loader: 'postcss-loader',
@@ -57,7 +55,7 @@ const clientConfig = {
   },
   plugins: [
     new ExtractTextPlugin({
-      filename: 'build/css/[name].css'
+      filename: '../build/css/[name].css'
     })
   ]
 }
@@ -71,7 +69,7 @@ const serverConfig = {
   externals: [nodeExternals()],
   output: {
     filename: 'server.js',
-    path: BUILD_DIR,
+    path: path.join(__dirname, '../'),
     libraryTarget: 'commonjs2'
   },
   devtool: 'cheap-module-source-map',
@@ -81,7 +79,7 @@ const serverConfig = {
         test: [/\.svg$/, /\.jpe?g$/, /\.png$/],
         loader: 'file-loader',
         options: {
-          name: 'build/media/[name].[ext]',
+          name: '../build/media/[name].[ext]',
           publicPath: url => url.replace(/public/, ''),
           emit: false
         }

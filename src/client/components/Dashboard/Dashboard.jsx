@@ -4,7 +4,7 @@ import Listcreate from './../List/Listcreate.jsx'
 import List from './../List/List.jsx'
 import Cardmodal from './../Card/Cardmodal.jsx'
 
-import './dashboard.scss'
+import './dashboard.css'
 
 export default class Dashboard extends Component {
   constructor () {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import './boardcreate.scss'
+import './boardcreate.css'
 
 export default class Boardcreate extends Component {
   constructor (props) {

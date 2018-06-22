@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import './list.scss'
+import './list.css'
 
 import Card from './../Card/Card.jsx'
 

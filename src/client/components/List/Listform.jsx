@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import './listform.scss'
+import './listform.css'
 
 export default class Listform extends Component {
   constructor (props) {

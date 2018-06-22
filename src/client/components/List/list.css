@@ -5,7 +5,7 @@ div .listcontainer {
     padding: 10px;
     color: #000;
     font-weight: bold;
-    // display: table;
+    /* display: table; */
     box-sizing: border-box;
     float: left;
     margin-left: 20px;
